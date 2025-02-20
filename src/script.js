@@ -18,6 +18,7 @@ async function fetchInSightdata() {
   );
   const data = await response.json();
   console.log(data);
+  const currentSol = data.sol_keys[6];
 
   const sols = await { ...data };
   delete sols.sol_keys;
@@ -42,16 +43,10 @@ async function fetchInSightdata() {
     div.appendChild(mn);
     div.appendChild(mx);
   }
-  latestSol.innerHTML = `Sol ${data.sol_keys[6]}`;
-  latestTemperatureMin.innerHTML = `Min temp: ${
-    data[Object.getOwnPropertyNames(data)[6]].AT.mn
-  }`;
-  latestTemperatureMax.innerHTML = `Max temp: ${
-    data[Object.getOwnPropertyNames(data)[6]].AT.mx
-  }`;
-  latestHws.innerHTML = `Horizontal wind speed (av): ${
-    data[Object.getOwnPropertyNames(data)[6]].HWS.av
-  }`;
+  latestSol.innerHTML = `Sol ${currentSol}`;
+  latestTemperatureMin.innerHTML = `Min temp: ${sols[currentSol].AT.mn}`;
+  latestTemperatureMax.innerHTML = `Max temp: ${sols[currentSol].AT.mx}`;
+  latestHws.innerHTML = `Horizontal wind speed (av): ${sols[currentSol].HWS.av}`;
 }
 
 fetchInSightdata();
