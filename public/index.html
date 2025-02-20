@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather on Mars</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="/env.js" defer></script>
+    <script src="../src/script.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <h1 class="title">Latest Weather News from Mars!</h1>
+      <div class="main">
+        <div>
+          <div class="info">
+            <h3>
+              Here you can find the weather measurements: temperature, wind and
+              pressure for each of the last seven available Sols*
+              <br /><span style="font-size: smaller; font-weight: 100"
+                >*Martian days</span
+              >
+            </h3>
+            <p>
+              Daily measurements are taken by NASA's InSight Mars lander from
+              Elysium Planitia - a flat, smooth plain near Mars' equator
+            </p>
+          </div>
+          <div class="today">
+            <div>
+              <h2 id="latest-sol">Today Sol: 689</h2>
+            </div>
+            <div>
+              <p id="latest-temperature-min">Min temperature: 20st</p>
+              <p id="latest-temperature-max">Max temperature: 20st</p>
+              <p id="latest-hws">Horizontal wind speed (average): 20km/h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sol-list" class="sols"></div>
+    </div>
+  </body>
+</html>
