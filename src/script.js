@@ -1,5 +1,3 @@
-// import dotenv from "dotenv";
-
 const latestSol = document.getElementById("latest-sol");
 const latestTemperatureMin = document.getElementById("latest-temperature-min");
 const latestTemperatureMax = document.getElementById("latest-temperature-max");
@@ -12,7 +10,7 @@ const hws = document.getElementById("hws");
 
 const solList = document.getElementById("sol-list");
 
-async function fetchInSightdata() {
+async function fetchInSightData() {
   const response = await fetch(
     `https://api.nasa.gov/insight_weather/?api_key=${API_KEY}&feedtype=json&ver=1.0`
   );
@@ -49,4 +47,4 @@ async function fetchInSightdata() {
   latestHws.innerHTML = `Horizontal wind speed (av): ${sols[currentSol].HWS.av}`;
 }
 
-fetchInSightdata();
+fetchInSightData();

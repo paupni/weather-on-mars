@@ -6,22 +6,22 @@ body {
   color: #fff;
   font-family: "Poppins", sans-serif;
   font-size: 1.4rem;
+  box-sizing: border-box;
 }
 
 .container {
-  padding: 0 100px;
-  margin-bottom: 6vh;
+  margin: 0 5rem;
+  height: auto;
 }
 
 .title {
-  /* padding-top: 2vh; */
-  width: 46%;
-  margin: 80px 0 20px 0;
-  font-size: 6rem;
+  font-size: 7rem;
+  width: 60%;
 }
 
 .main {
   width: 46%;
+  margin-bottom: 1rem;
 }
 
 .info {
@@ -29,17 +29,47 @@ body {
 
 .today {
   display: flex;
-  justify-content: space-between;
-  padding: 20px 110px 40px 110px;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .sols {
   display: flex;
-  justify-content: space-between;
-  /* padding: 0 100px; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 1rem;
 }
 
 .sol {
   padding: 10px 20px;
   background-color: rgba(249, 220, 193, 0.4);
+  text-align: center;
+  min-width: 180px;
+  flex: 1;
+}
+
+@media only screen and (max-width: 968px) {
+  .container {
+    margin: 0 5%;
+  }
+
+  .title {
+    padding: 0;
+    width: 100%;
+    font-size: 4rem;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .today {
+    text-align: center;
+  }
+
+  .sols {
+    flex-direction: column;
+  }
 }
