@@ -13,7 +13,7 @@ const solList = document.getElementById("sol-list");
 const currentDate = new Date().toLocaleDateString();
 console.log(currentDate);
 
-import {API_KEY} from './env.js';
+// import {API_KEY} from './env.js';
 
 async function fetchInSightData() {
   const response = await fetch(
